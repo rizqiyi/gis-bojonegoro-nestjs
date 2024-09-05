@@ -32,9 +32,7 @@ export class PhotosController {
     file: Express.Multer.File,
     @Body('folder') folder: string = '',
   ) {
-    const docs = await this.photosService.create(file, folder);
-
-    return Promise.resolve(docs);
+    return this.photosService.create(file, folder);
   }
 
   @Get(':id')

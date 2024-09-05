@@ -23,7 +23,7 @@ export class PhotosService {
           (err, docs) => {
             if (err) throw new Error(err);
 
-            return resolve(docs);
+            resolve(docs);
           },
         );
       });
